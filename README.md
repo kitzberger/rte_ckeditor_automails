@@ -22,7 +22,7 @@ $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['custom'] = 'EXT:custom/Configurat
 
 #### EXT:custom/Configuration/RTE/Default.yaml
 ```yaml
-# Load default processing options + the dl plugin
+# Load default processing options + the automails plugin
 imports:
   - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
   - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
