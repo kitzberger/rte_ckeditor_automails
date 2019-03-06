@@ -1,0 +1,11 @@
+{
+	"name": "kitzberger/rte-ckeditor-automails",
+	"type": "typo3-cms-extension",
+	"description": "TYPO3 CKEditor Rich Text Editor: Auto-link mail addresses",
+	"homepage": "https://github.com/kitzberger/rte_ckeditor_automails",
+	"license": ["GPL-2.0+"],
+	"keywords": ["TYPO3 CMS"],
+	"require": {
+		"typo3/cms-core": ">=8.7.0"
+	}
+}

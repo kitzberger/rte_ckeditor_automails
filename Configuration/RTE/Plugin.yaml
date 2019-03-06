@@ -1,0 +1,4 @@
+editor:
+  externalPlugins:
+    automails:
+      resource: "EXT:rte_ckeditor_automails/Resources/Public/JavaScript/plugin.js"
