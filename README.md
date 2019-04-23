@@ -29,3 +29,16 @@ imports:
   - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
   - { resource: "EXT:rte_ckeditor_automails/Configuration/RTE/Plugin.yaml" }
 ```
+
+### Default link class
+
+The class that is being used by default for the created `<a>` tag is: `mail`.
+
+You can change that by adding this to your RTE configuration:
+
+```
+editor:
+  externalPlugins:
+    automails:
+      defaultClass: 'autolinked-mail-address'
+```

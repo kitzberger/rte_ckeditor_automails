@@ -6,6 +6,12 @@
  */
 CKEDITOR.plugins.add('automails', {
 	init: function(editor) {
+		// Default Config
+		var defaultConfig = {
+		  defaultClass: 'mail'
+		};
+		var config = CKEDITOR.tools.extend(defaultConfig, editor.config.automails || {}, true);
+
 		var spaceChar = 32, enterChar = 13, tabChar = 9, fillChar = ' ';
 		var isFillChar = function (node, isInStart) {
 			return node.nodeType == 3 && !node.nodeValue.replace(new RegExp((isInStart ? '^' : '' ) + ' '), '').length;
@@ -113,6 +119,10 @@ CKEDITOR.plugins.add('automails', {
 					href = a.getAttribute('href').replace(new RegExp(fillChar,'g'), '');
 					href = /^(?:mailto:)/ig.test(href) ? href : 'mailto:' + href;
 					a.href = html(href);
+
+					if (config.defaultClass) {
+						a.className = config.defaultClass;
+					}
 
 					range.insertNode(a);
 					range.setStart(a.nextSibling, 0);
