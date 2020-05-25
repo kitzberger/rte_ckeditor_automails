@@ -86,11 +86,9 @@ CKEDITOR.plugins.add('automails', {
 				} while (charCode != 160 && charCode != spaceChar);
 
 				// see http://emailregex.com/
-				var mailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-				if (range.toString().replace(new RegExp(fillChar, 'g'), '').match(mailPattern)) {
+				if (range.toString().replace(new RegExp(fillChar, 'g'), '').match(/(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
 					while (range.toString().length) {
-						if (mailPattern.test(range.toString())) break;
+						if (/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(range.toString())) break;
 
 						try {
 							range.setStart(range.startContainer, range.startOffset+1);
