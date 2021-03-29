@@ -7,5 +7,10 @@
 	"keywords": ["TYPO3 CMS"],
 	"require": {
 		"typo3/cms-core": ">=8.7.0"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "header_image"
+		}
 	}
 }
