@@ -10,7 +10,7 @@
 	},
 	"extra": {
 		"typo3/cms": {
-			"extension-key": "header_image"
+			"extension-key": "rte_ckeditor_automails"
 		}
 	}
 }
